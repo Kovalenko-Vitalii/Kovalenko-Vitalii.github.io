@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ===== Tokens =====
+   Blueprint drafting: navy ground, chalk-line white, drafting-pencil red.
+   Sharp corners throughout — this is a technical drawing, not a poster. */
+:root {
+  --bg: #16324A;
+  --surface: #1C3D59;
+  --line: rgba(234, 242, 245, 0.16);
+  --line-strong: rgba(234, 242, 245, 0.32);
+  --ink: #EAF2F5;
+  --muted: #8FADC2;
+  --accent: #E8552E;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --max-width: 980px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  counter-reset: sheet;
+  position: relative;
+}
+
+/* Drafting corner crop marks */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line-strong);
+  z-index: 5;
+  pointer-events: none;
+}
+body::before { top: 14px; left: 14px; border-right: none; border-bottom: none; }
+body::after { bottom: 14px; right: 14px; border-left: none; border-top: none; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+section, footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 96px 32px;
+  position: relative;
+}
+
+/* Dimension-line section headers: tick — LABEL — SHEET NO */
+section > h2 {
+  counter-increment: sheet;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+section > h2::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+section > h2::after {
+  content: "SHEET " counter(sheet, decimal-leading-zero) "/04";
+  margin-left: auto;
+  color: var(--line-strong);
+  font-size: 0.7rem;
+}
+
+/* ===== Nav ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  background: rgba(22, 50, 74, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+nav .logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+nav .nav-links li:not(:last-child)::after {
+  content: "";
+}
+
+nav .nav-links a {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid transparent;
+}
+
+nav .nav-links a:hover {
+  color: var(--ink);
+  border-color: var(--line-strong);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  font-size: 1.1rem;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* ===== Hero ===== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+}
+
+#hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 9vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+#hero .tagline {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  margin-top: 22px;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent);
+}
+
+#hero .tagline::before {
+  content: "ROLE: ";
+  color: var(--line-strong);
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 13px 30px;
+  border: 1px solid var(--ink);
+  outline: 1px solid var(--bg);
+  outline-offset: -5px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.cta-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  outline-color: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+/* ===== About ===== */
+#about p {
+  font-size: 1.1rem;
+  color: var(--ink);
+  max-width: 620px;
+}
+
+/* ===== Projects ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  counter-reset: fig;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px dashed var(--line-strong);
+  padding: 22px;
+  position: relative;
+}
+
+.project-card::before,
+.project-card::after,
+.project-card > h3::before {
+  pointer-events: none;
+}
+
+/* corner ticks on each spec sheet */
+.project-card {
+  position: relative;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 10px; height: 10px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+}
+
+.project-card h3 {
+  counter-increment: fig;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-card h3::before {
+  content: "FIG. " counter(fig, decimal-leading-zero) " — ";
+  color: var(--accent);
+}
+
+.project-card p { color: var(--muted); font-size: 0.92rem; }
+
+.project-card .tech {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 14px 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.project-card a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-right: 18px;
+}
+
+/* ===== Skills ===== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.skills-list li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  padding: 8px 14px;
+  color: var(--ink);
+}
+
+/* ===== Contact ===== */
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+#contact a {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+/* ===== Title block stamp (signature element) ===== */
+.title-block {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  width: 180px;
+}
+
+.tb-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.tb-row:last-child { border-bottom: none; }
+
+.tb-row span {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.tb-row strong {
+  color: var(--ink);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 32px 24px 90px;
+  text-align: center;
+}
+
+footer p {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  nav .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  section, footer { padding: 70px 20px; }
+  section > h2::after { display: none; }
+  .title-block { display: none; }
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
