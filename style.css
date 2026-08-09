@@ -287,13 +287,11 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-.photo-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, transparent 48%, var(--line) 48%, var(--line) 52%, transparent 52%);
-  opacity: 0.5;
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .photo-placeholder-label {
@@ -433,11 +431,6 @@ img { max-width: 100%; display: block; }
 .project-row:first-child { border-top: none; padding-top: 0; }
 .project-row:last-child { padding-bottom: 0; }
 
-.project-row:hover {
-  cursor: pointer;
-}
-
-.project-row:hover .project-row-main h3 { color: var(--accent-ink); }
 
 .project-row-index {
   font-family: var(--font-mono);
@@ -701,4 +694,83 @@ img { max-width: 100%; display: block; }
   .footer-row { flex-direction: column; gap: 6px; }
 
   .status-center { display: none; }
+}
+
+.education-card {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.education-head h3 {
+  font-family: var(--font-display);
+  font-size: 23px;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+
+.education-institution {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.education-meta-row {
+  display: flex;
+  gap: 56px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.education-meta-item dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.education-meta-item dd {
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.education-modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 32px;
+}
+
+.module-group h4 {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.module-chip {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.module-chip::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--ink-faint);
 }
