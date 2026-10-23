@@ -2,410 +2,119 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6F8">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0C0F">
-
-<title>Vitalii Kovalenko — Software Engineering Graduate</title>
-<meta name="description" content="Vitalii Kovalenko — BSc (Hons) Software Systems Development graduate, SETU. Backend, cloud and Unity projects, work experience and contact information.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Vitalii Kovalenko, Software Engineering Graduate</title>
+<meta name="description" content="Vitalii Kovalenko, BSc (Hons) Software Systems Development graduate from SETU. Backend, cloud and Unity projects.">
 <link rel="stylesheet" href="style.css">
-<script>
-  (function () {
-    try {
-      var saved = localStorage.getItem('theme');
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    } catch (e) {}
-  })();
-</script>
+<script src="script.js" defer></script>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container header-row">
-      <a href="#home" class="logo">VK<span class="logo-dot">.</span></a>
-      <div class="header-right">
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-        </nav>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark theme">
-          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-          </svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-
-        <div class="hero-main reveal">
-          <p class="mono-tag">first class honours · backend development · based in ireland</p>
-          <h1>Vitalii<br>Kovalenko</h1>
-          <p class="hero-lede">
-            First Class Honours graduate in Software Systems Development (SETU, 2026), focused on backend systems. 
-            I've shipped an ASP.NET Core internal tool at SD Worx, built an IoT product with its own Azure telemetry pipeline,
-            and designed event-driven architecture for a full-scale Unity game. 
-            Looking for a graduate role where I can keep building systems like these.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View projects</a>
-          </div>
-        </div>
-
-        <aside class="hero-card reveal">
-            <div class="photo-frame">
-                <img src="image/photo.jpg" alt="Vitalii Kovalenko" class="photo-img">
-            </div>
-        </aside>
-
-        <dl class="hero-meta-list reveal">
-          <div class="meta-row">
-            <dt>location</dt>
-            <dd>Ireland</dd>
-          </div>
-          <div class="meta-row">
-            <dt>email</dt>
-            <dd><a href="mailto:vitkovolenko@gmail.com">vitkovolenko@gmail.com</a></dd>
-          </div>
-          <div class="meta-row">
-            <dt>github</dt>
-            <dd><a href="https://github.com/Kovalenko-Vitalii" target="_blank">github.com/Kovalenko-Vitalii</a></dd>
-          </div>
-          <div class="meta-row">
-            <dt>linkedin</dt>
-            <dd><a href="https://linkedin.com/in/vitalii-kovalenko-646346253" target="_blank">linkedin.com/in/vitalii-kovalenko</a></dd>
-          </div>
-        </dl>
-
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-
-        <div class="section-head">
-          <h2 class="section-heading">About</h2>
-        </div>
-
-        <div class="about-content reveal">
-          <p>
-           I finished my degree at South East Technological University in May 2026 with First Class Honours (1.1) in Software Systems Development.
-          </p>
-          <p>
-            During my internship at SD Worx I wrote backend logic and database models for an internal ASP.NET Core tool used daily by the payrolling team. 
-            Outside of that, I built MediAlert, a Raspberry Pi–based medication reminder system with its own Azure IoT telemetry pipeline, and NOMO,
-            a Unity exploration game with a event-driven architecture across its core systems.
-          </p>
-          <p>
-           I'm applying for graduate software engineering roles, particularly ones centred on backend systems,
-            cloud infrastructure, or architecture-heavy problems — the kind of work above is what I want to keep doing.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-  <div class="container">
-
-    <div class="section-head">
-      <h2 class="section-heading">Education</h2>
-    </div>
-
-    <div class="education-card reveal">
-
-      <div class="education-head">
-        <h3>BSc (Hons) Software Systems Development</h3>
-        <span class="education-institution">South East Technological University (SETU), Ireland</span>
-      </div>
-
-      <dl class="education-meta-row">
-        <div class="education-meta-item">
-          <dt>Duration</dt>
-          <dd>Sept 2022 – May 2026</dd>
-        </div>
-        <div class="education-meta-item">
-          <dt>Result</dt>
-          <dd>First Class Honours (1.1)</dd>
-        </div>
-      </dl>
-
-      <div class="education-modules">
-        <div class="module-group">
-          <h4>Core computer science</h4>
-          <div class="module-list">
-            <span class="module-chip">Data Structures &amp; Algorithms</span>
-            <span class="module-chip">Object-Oriented Programming</span>
-          </div>
-        </div>
-        <div class="module-group">
-          <h4>Software engineering</h4>
-          <div class="module-list">
-            <span class="module-chip">Software &amp; Web Development</span>
-            <span class="module-chip">Systems Development</span>
-          </div>
-        </div>
-        <div class="module-group">
-          <h4>Data &amp; infrastructure</h4>
-          <div class="module-list">
-            <span class="module-chip">Databases</span>
-            <span class="module-chip">Cloud Technologies</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
+<header class="bar">
+  <div class="wrap bar-row">
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</section>
+</header>
 
-    <section id="experience" class="section">
-      <div class="container">
+<main>
 
-        <div class="section-head">
-          <h2 class="section-heading">Experience</h2>
-        </div>
-
-        <div class="experience-list">
-          <article class="experience-row reveal">
-            <div class="experience-row-head">
-              <h3>Intern Software Developer</h3>
-              <span class="experience-meta">SD Worx · Ireland · Sept 2024 – Dec 2024</span>
-            </div>
-            <div class="experience-row-body">
-              <ul>
-                <li>Built and maintained backend logic, database models and UI components for an internal ASP.NET Core data-monitoring application used by the payrolling team to track staff check-in/check-out activity.</li>
-                <li>Parsed and processed raw operational data from a SQL Server database into the application layer, for a tool used in daily team workflows.</li>
-                <li>Took part in code review and wrote tests as part of an Agile, sprint-based process, working alongside senior engineers on design and implementation.</li>
-                <li>Turned business requirements into tested backend features under sprint deadlines.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-
-        <div class="section-head">
-          <h2 class="section-heading">Projects</h2>
-        </div>
-
-        <div class="project-list">
-
-          <article class="project-row reveal">
-            <div class="project-row-index">01</div>
-            <div class="project-row-main">
-              <h3>MediAlert — IoT Medication Monitoring System</h3>
-              <p class="project-description">
-                An IoT medication reminder and monitoring system on a
-                Raspberry Pi. Reminders, sensor polling and connectivity run
-                on three separate threads, so a slow network call can't
-                block a time-critical alert. Telemetry flows through Azure
-                IoT Hub, Stream Analytics and Power BI, with retry logic and
-                local logging so device state survives restarts and failed
-                cloud sends. Debugging it surfaced two real data-integrity
-                bugs — including a temperature sensor silently reporting
-                Fahrenheit while the rest of the pipeline assumed Celsius.
-              </p>
-              <div class="tech-row">
-                <code>Python</code><code>Raspberry&nbsp;Pi</code><code>Azure&nbsp;IoT&nbsp;Hub</code><code>Power&nbsp;BI</code>
-              </div>
-            </div>
-            <div class="project-row-links">
-              <a href="https://github.com/Kovalenko-Vitalii/MediAlert" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <div class="project-row-index">02</div>
-            <div class="project-row-main">
-              <h3>NOMO — Survival/Exploration Game</h3>
-              <p class="project-description">
-                Built to learn the full game development pipeline end to
-                end — not just gameplay, but the architecture underneath
-                it. Systems communicate through events rather than direct
-                references, so player state, inventory, quests, status
-                effects and AI can be extended or swapped without touching
-                unrelated code. That same decoupling made it possible to
-                add a slot-based save system that serialises the entire
-                world state without every system needing to know how
-                saving works.
-              </p>
-              <div class="tech-row">
-                <code>C#</code><code>Unity</code>
-              </div>
-            </div>
-            <div class="project-row-links">
-              <a href="https://github.com/Kovalenko-Vitalii/FinalYearProject" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <div class="project-row-index">03</div>
-            <div class="project-row-main">
-              <h3>Lost &amp; Found — Android Application</h3>
-              <p class="project-description">
-                An Android app for reporting and finding lost property.
-                Users sign in with Google through Firebase Authentication,
-                browse reported items, and add their own — with a Room
-                database handling local storage alongside Firebase. Built on
-                MVVM: Compose screens own the UI, view models hold state and
-                logic, and a repository layer sits between them and
-                Room/Firebase so neither has to know about the other
-                directly.
-              </p>
-              <div class="tech-row">
-                <code>Kotlin</code><code>Jetpack&nbsp;Compose</code><code>MVVM</code><code>Room</code><code>Firebase</code>
-              </div>
-            </div>
-            <div class="project-row-links">
-              <a href="https://github.com/Kovalenko-Vitalii/LostFound" target="_blank">Source →</a>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <div class="project-row-index">04</div>
-            <div class="project-row-main">
-              <h3>Modular Gameplay Framework</h3>
-              <p class="project-description">
-                A set of plug-and-play Unity modules — state management,
-                UI, save/load — built to be dropped into any new project
-                instead of rebuilt from scratch each time. The focus is
-                reusability: each module is self-contained and configurable,
-                so it works for whatever a future project needs rather than
-                one game's specific rules. Still in progress.
-              </p>
-              <div class="tech-row">
-                <code>C#</code><code>Unity</code><code>Raycast</code>
-              </div>
-            </div>
-            <div class="project-row-links">
-              <a href="https://github.com/Kovalenko-Vitalii/Modular-Gameplay-Framework" target="_blank">Source (in development) →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-
-        <div class="section-head">
-          <h2 class="section-heading">Skills</h2>
-        </div>
-
-        <div class="skills-groups reveal">
-
-          <div class="skill-group">
-            <h4>Languages</h4>
-            <div class="skills"><span class="skill">C#</span><span class="skill">Java</span><span class="skill">Kotlin</span><span class="skill">Python</span><span class="skill">JavaScript</span></div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Foundations</h4>
-            <div class="skills"><span class="skill">OOP design</span><span class="skill">Data structures &amp; algorithms</span><span class="skill">Systems architecture</span><span class="skill">Multithreading &amp; concurrency</span><span class="skill">Agile delivery</span></div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Backend &amp; Web</h4>
-            <div class="skills"><span class="skill">ASP.NET Core</span><span class="skill">Razor Pages</span><span class="skill">Entity Framework Core</span><span class="skill">React</span><span class="skill">HTML/CSS</span></div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Databases</h4>
-            <div class="skills"><span class="skill">SQL Server</span><span class="skill">MySQL</span><span class="skill">MongoDB</span></div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Cloud &amp; Tools</h4>
-            <div class="skills"><span class="skill">Azure IoT Hub</span><span class="skill">AWS Serverless</span><span class="skill">AWS CDK</span><span class="skill">Docker</span><span class="skill">Kubernetes</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">Firebase</span></div>
-          </div>
-
-          <div class="skill-group">
-            <h4>Other</h4>
-            <div class="skills"><span class="skill">Unity</span><span class="skill">Android Studio</span><span class="skill">Google Maps API</span></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>© 2026 Vitalii Kovalenko</span>
-      <span>Software Engineering Graduate</span>
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1>Vitalii<br>Kovalenko</h1>
+      <p class="deck">Software engineering graduate. Backend systems, cloud infrastructure and the architecture underneath.</p>
+      <p class="small">Ireland. Open to graduate roles.</p>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Theme toggle
-    (function () {
-      var root = document.documentElement;
-      var toggle = document.getElementById('themeToggle');
-      var media = window.matchMedia('(prefers-color-scheme: dark)');
+  <section id="about">
+    <div class="wrap two">
+      <div>
+        <h2>About</h2>
+        <p class="lead">I like backend systems, cloud infrastructure and problems where the architecture matters.</p>
+        <dl class="facts">
+          <dt>Degree</dt>
+          <dd>BSc (Hons) Software Systems Development, SETU. First Class Honours, 2026.</dd>
+          <dt>Worked</dt>
+          <dd>Intern developer at SD Worx, 2024.</dd>
+          <dt>Looking for</dt>
+          <dd>Graduate software engineering roles.</dd>
+        </dl>
+      </div>
+      <figure>
+        <!-- Replace the frame with: <img src="image/portrait.jpg" alt="..."> -->
+        <div class="frame tall"><span>Photo</span></div>
+        <figcaption>Caption goes here.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-      function applyTheme(theme) {
-        root.setAttribute('data-theme', theme);
-      }
+  <section id="projects">
+    <div class="wrap head">
+      <div>
+        <h2>Projects</h2>
+        <p class="small">Select a project to open it.</p>
+      </div>
+      <div class="ctl">
+        <span id="count" aria-live="polite"></span>
+        <button type="button" id="left" aria-label="Previous projects">Previous</button>
+        <button type="button" id="right" aria-label="Next projects">Next</button>
+      </div>
+    </div>
+    <ul class="track" id="track"></ul>
+    <noscript><div class="wrap"><p>Projects need JavaScript. They are all on <a href="https://github.com/Kovalenko-Vitalii">GitHub</a>.</p></div></noscript>
+    <div class="wrap"><div class="prog"><div id="bar"></div></div></div>
+  </section>
 
-      if (toggle) {
-        toggle.addEventListener('click', function () {
-          var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-          var next = current === 'dark' ? 'light' : 'dark';
-          applyTheme(next);
-          try { localStorage.setItem('theme', next); } catch (e) {}
-        });
-      }
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="row"><span class="yr">2026</span><div><h3>Graduated with First Class Honours (1.1)</h3><p>BSc (Hons) Software Systems Development, South East Technological University.</p></div></div>
+      <div class="row"><span class="yr">2024</span><div><h3>Intern Software Developer, SD Worx</h3><p>Backend logic and database models for an internal ASP.NET Core tool used daily by the payrolling team. Sprints, code review and tests.</p></div></div>
+      <div class="row"><span class="yr">2022</span><div><h3>Started at SETU</h3><p>Data structures, databases, cloud technologies and systems development.</p></div></div>
+    </div>
+  </section>
 
-      media.addEventListener('change', function (e) {
-        var saved = null;
-        try { saved = localStorage.getItem('theme'); } catch (e) {}
-        if (!saved) applyTheme(e.matches ? 'dark' : 'light');
-      });
-    })();
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <dl class="grid">
+        <div><dt>Languages</dt><dd>C#, Java, Kotlin, Python, JavaScript</dd></div>
+        <div><dt>Backend and web</dt><dd>ASP.NET Core, Razor Pages, Entity Framework Core, React, HTML and CSS</dd></div>
+        <div><dt>Databases</dt><dd>SQL Server, MySQL, MongoDB</dd></div>
+        <div><dt>Cloud and tools</dt><dd>Azure IoT Hub, AWS Serverless, AWS CDK, Docker, Kubernetes, Git, Firebase</dd></div>
+        <div><dt>Foundations</dt><dd>OOP design, data structures and algorithms, systems architecture, concurrency, Agile</dd></div>
+        <div><dt>Other</dt><dd>Unity, Android Studio, Google Maps API</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const revealEls = document.querySelectorAll('.reveal');
-    if (prefersReduced || !('IntersectionObserver' in window)) {
-      revealEls.forEach(el => el.classList.add('is-visible'));
-    } else {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      revealEls.forEach(el => observer.observe(el));
-    }
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="big"><a href="mailto:vitkovolenko@gmail.com">vitkovolenko@gmail.com</a></p>
+      <p><a href="https://github.com/Kovalenko-Vitalii" target="_blank" rel="noopener">GitHub</a><br><a href="https://linkedin.com/in/vitalii-kovalenko-646346253" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </section>
 
-    document.querySelectorAll('.project-row[data-href]').forEach(row => {
-      row.addEventListener('click', (e) => {
-        if (e.target.closest('a')) return;
-        window.open(row.dataset.href, '_blank');
-      });
-    });
-  </script>
+</main>
+
+<footer class="wrap"><p class="small">© 2026 Vitalii Kovalenko</p></footer>
+
+<dialog id="view" aria-label="Project details">
+  <div class="vbar">
+    <button type="button" id="vprev">Previous project</button>
+    <button type="button" id="vnext">Next project</button>
+    <button type="button" id="vclose">Close</button>
+  </div>
+  <article class="wrap" id="vbody"></article>
+</dialog>
 
 </body>
 </html>
